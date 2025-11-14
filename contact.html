@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer Store - Juegos Gratis</title>
+    <title>Contacto</title>
     <link rel="icon" type="image/png" href="img/controlador-de-juego.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -27,37 +27,23 @@
         </nav>
     </header>
 
-    <!-- HERO / BANNER PRINCIPAL -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Descargá tus juegos favoritos <span>gratis</span></h2>
-            <a href="games.html" class="btn">Explorar Juegos</a>
-        </div>
-    </section>
+    <section id="contacto" class="contact-section">
+        <h2>Pedinos tu juego</h2>
+        <p>¿No encontrás el juego que querés? Escribinos y lo agregamos a GamerStore.</p>
 
-    <!-- Sección de Juegos Destacados -->
-    <section class="featured">
-        <h2>🎮 Juegos Destacados</h2>
-        <div class="games-grid">
-            <div class="game-card">
-                <img src="#" alt="Juego 1">
-                <h3>Cyber Strike</h3>
-                <p>Acción futurista y batallas intensas.</p>
-                <a href="#" class="btn-secondary">Descargar</a>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
             </div>
-            <div class="game-card">
-                <img src="#" alt="Juego 2">
-                <h3>Fantasy Quest</h3>
-                <p>Explorá reinos mágicos llenos de aventuras.</p>
-                <a href="#" class="btn-secondary">Descargar</a>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Tu correo" required>
             </div>
-            <div class="game-card">
-                <img src="#" alt="Juego 3">
-                <h3>Speed Racer</h3>
-                <p>Competí a máxima velocidad en circuitos urbanos.</p>
-                <a href="#" class="btn-secondary">Descargar</a>
+            <div class="form-group">
+                <textarea name="mensaje" rows="5" placeholder="Contanos qué juego te gustaría ver aquí..."
+                    required></textarea>
             </div>
-        </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
     </section>
 
     <!-- FOOTER -->
@@ -69,7 +55,6 @@
             <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
         </div>
     </footer>
-
 
 </body>
 

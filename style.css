@@ -1,42 +1,221 @@
-/*
-  Hoja de estilos principal del proyecto.
-*/
-
-/* Estilos generales */
+/* 🌌 FUENTES Y COLORES BASE */
 body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    scroll-behavior: smooth;
 }
 
-/* Contenedor principal de la aplicación */
-.contenedor-app {
-    /* Nada especial por ahora, solo agrupa todo */
+/* 🔹 HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 50px;
+    border-bottom: 2px solid #00ff99;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* Encabezado */
-.encabezado {
-    border-bottom: 1px solid #2a2a2a;
-    padding: 24px 32px;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-.encabezado h1 {
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.6em;
+}
+
+.logo span {
+    color: #00ff99;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
-    color: white;
-    font-size: 1.5rem; /* 24px */
 }
 
-/* Parte del logo con color diferente */
-.logo-acento {
-    color: #00FFFF;
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav a:hover, .nav .active {
+    color: #00ff99;
+}
+
+/* 🔹 HERO */
+.hero {
+    background: url('../img/banner/banner1.jpg') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.hero h2 span {
+    color: #00ff99;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00ff99;
+    color: #000;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #00cc7a;
+}
+
+/* 🔹 SECCIÓN DESTACADOS */
+.featured {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.featured h2 {
+    margin-bottom: 30px;
+    color: #00ff99;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: #1a1a1a;
+    border: 2px solid #00ff99;
+    border-radius: 15px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff99;
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #00ff99;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #00cc7a;
+}
+
+
+/* 🔹 FOOTER */
+.footer {
+    background: #0a0a0a;
+    text-align: center;
+    padding: 25px;
+    border-top: 2px solid #00ff99;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer .socials img {
+    width: 25px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.footer .socials img:hover {
+    transform: scale(1.2);
+}
+
+/* 🔹 ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 🔹 RESPONSIVE */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.titulo-seccion {
+    color: #00ff99;
+    text-align: center;
+    margin: 32px 0;
+    font-size: 2rem; /* 32px */
 }
 
 /* Barra de controles (filtros) */
 .controles {
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid #00ff99;
     padding: 24px 32px;
 }
 
@@ -47,14 +226,14 @@ body {
 }
 
 .contenedor-filtro label {
-    color: #a0a0a0;
+    color: #00ff99;
 }
 
 /* Menú desplegable de géneros */
 select#filtro-genero {
     width: 200px;
     background-color: #1a1a1a;
-    border: 1px solid #444;
+    border: #00ff99;
     color: white;
     padding: 8px 12px;
     border-radius: 6px;
@@ -63,7 +242,7 @@ select#filtro-genero {
 
 /* Contador de juegos */
 .contador-juegos {
-    color: #888;
+    color:#00ff99;
     font-size: 0.875rem; /* 14px */
     margin-left: 16px;
 }
@@ -78,7 +257,7 @@ select#filtro-genero {
     text-align: center;
     padding: 80px 0;
     font-size: 1.25rem; /* 20px */
-    color: #00FFFF;
+    color: #00ff99;
 }
 
 /* Mensaje por si no se encuentran juegos */
@@ -116,7 +295,7 @@ select#filtro-genero {
 /* Efecto al pasar el mouse por encima de la tarjeta */
 .tarjeta-juego:hover {
     transform: scale(1.05);
-    border-color: #00FFFF;
+    border-color:  #00ff99;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
@@ -148,7 +327,82 @@ select#filtro-genero {
 }
 
 .tarjeta-juego .genero {
-    color: #00FFFF;
+    color:  #00ff99;
     font-size: 0.875rem; /* 14px */
     margin: 0;
 }
+
+/* 🔹 SECCIÓN DE CONTACTO */
+.contact-section {
+    padding: 80px 30px;
+    background: #0d0d0d;
+    text-align: center;
+    border-top: 2px solid #00ff99;
+}
+
+.contact-section h2 {
+    color: #00ff99;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    color: #ccc;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #00ff99;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    background: #0d0d0d;
+    border: 1px solid #00ff99;
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px #00ff99;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    background: #00ff99;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00cc7a;
+}
+
+/* Responsive contacto */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
